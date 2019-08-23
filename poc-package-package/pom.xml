@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>poc.facet</groupId>
+    <artifactId>facet-poc-parent</artifactId>
+    <version>1.0.1</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>poc-package-package</artifactId>
+  <packaging>zip</packaging>
+  <name>Poc package package - Poc for facet testing</name>
+
+  <dependencies>
+    <!-- Base distribution(s) for the MP -->
+    <dependency>
+      <groupId>org.nuxeo.ecm.distribution</groupId>
+      <artifactId>nuxeo-nxr-server</artifactId>
+      <type>zip</type>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>nuxeo-studio</groupId>
+      <artifactId>content-now</artifactId>
+      <version>1.0.1</version>
+    </dependency>
+
+    <!-- Additional bundles to be deployed by the MP -->
+    <dependency>
+      <groupId>poc.facet</groupId>
+      <artifactId>facet-poc-core</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.nuxeo.build</groupId>
+        <artifactId>ant-assembly-maven-plugin</artifactId>
+        <configuration>
+          <buildFiles>
+            <buildFile>${basedir}/src/main/assemble/assembly.xml</buildFile>
+          </buildFiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+
+</project>

@@ -1,0 +1,33 @@
+<!-- See documentation at http://doc.nuxeo.com/x/HgIz -->
+<package type="addon" name="poc-for-facet-testing" version="@VERSION@">
+  <title>Poc for facet testing</title>
+  <description>
+    <p>Put here an HTML description of your Nuxeo Package.</p>
+  </description>
+  <!-- <home-page>http://doc.nuxeo.com/</home-page> -->
+  <vendor>Warner Bros</vendor>
+  <installer restart="true" />
+  <uninstaller restart="true" />
+  <!-- <hotreload-support>false</hotreload-support> -->
+  <!-- <require-terms-and-conditions-acceptance>false</require-terms-and-conditions-acceptance> -->
+  <!-- Nuxeo Validation: none | inprocess | primary_validation | nuxeo_certified -->
+  <nuxeo-validation>none</nuxeo-validation>
+  <!-- Production State: production_ready | testing | proto -->
+  <production-state>testing</production-state>
+  <supported>false</supported>
+  <platforms>
+    <platform>server-@DISTRIB_VERSION@</platform>
+    <platform>server-@DISTRIB_VERSION@-HF*</platform>
+  </platforms>
+  <!-- Dependencies on other packages -->
+  <dependencies>
+    <package>nuxeo-web-ui</package>
+    <package>nuxeo-jsf-ui</package>
+    <package>nuxeo-dam</package>
+    <package>nuxeo-spreadsheet</package>
+  </dependencies>
+  <license>Apache License, Version 2.0</license>
+  <license-url>http://www.apache.org/licenses/LICENSE-2.0</license-url>
+  <!-- Visibility: PRIVATE | MARKETPLACE | DEV | PUBLIC -->
+  <visibility>DEV</visibility>
+</package>

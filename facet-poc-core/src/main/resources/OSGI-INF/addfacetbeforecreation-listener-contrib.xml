@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<component name="poc.facet.core.listeners.listener.addfacetbeforecreation">
+
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+    <listener name="addfacetbeforecreation"
+      class="poc.facet.core.listeners.AddFacetBeforeCreation">
+        <event>emptyDocumentModelCreated</event>
+    </listener>
+  </extension>
+
+</component>
